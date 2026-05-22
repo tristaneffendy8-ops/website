@@ -1,0 +1,177 @@
+/* Background */
+body {
+  background-color: #ae5d1abf;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Mencegah screen bisa digeser ke kanan-kiri di HP */
+}
+
+/* Pengaman Global untuk Gambar agar tidak jebol di HP */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Header */
+header {
+  text-align: center;
+  background-image: url(Images/Walpper_abstrak.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Tombol otomatis turun ke bawah jika layar HP terlalu sempit */
+  gap: 10px;
+}
+
+.navbar a {
+  display: inline-block;
+  margin: 5px 10px;
+  color: #fafafa;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Tombol kotak di navbar */
+.nav-button {
+  padding: 10px 20px;
+  border: 2px solid rgb(255, 185, 99);
+  border-radius: 8px;
+  background-color: #444;
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: rgb(255, 185, 99);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Main Content */
+main {
+  max-width: 700px;
+  width: 90%; /* Menggunakan persentase agar mengecil pas di layar HP */
+  margin: 40px auto;
+  padding: 30px;
+  background-color: white;
+  text-align: center;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+main h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+main p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Link ke Petani Code */
+.external-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: #007acc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.external-link:hover {
+  color: #005f99;
+  text-decoration: underline;
+}
+
+/* Data Diri - Profil */
+.profile {
+  text-align: center;
+  margin: 50px auto;
+  padding: 0 20px; /* Jarak aman kanan kiri di layar HP */
+}
+
+.profile h2 {
+  font-size: 30px;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.profile-card {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  text-align: center;
+  font-size: 16px;
+  color: #444;
+  box-sizing: border-box;
+}
+
+.profile-card p {
+  word-wrap: break-word; /* Mencegah teks alamat/email panjang memotong layout HP */
+}
+
+.profile-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 4px solid #ccc;
+}
+
+.profile-card strong {
+  color: #222;
+  font-weight: 600;
+}
+
+/*Contact*/
+.icon-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Supaya ikon sosmed turun rapi di layar HP super kecil */
+  gap: 30px;
+}
+
+.icon-links a {
+  transition: transform 0.2s ease;
+}
+
+.icon-links a:hover {
+  transform: scale(1.1);
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  margin-top: 40px;
+}
+
+/* Penyesuaian khusus HP */
+@media screen and (max-width: 600px) {
+  main h1 { font-size: 22px; }
+  main { padding: 20px; margin: 20px auto; }
+  .profile h2 { margin-bottom: 30px; font-size: 24px; }
+  .profile-card { padding: 20px; }
+}
